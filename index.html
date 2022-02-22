@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoster! - Tugas Akhir Dicoding</title>
+    <meta name="description" content="Website pencari hotel di seluruh indonesia"/>
+    <link rel="icon" type="image/x-icon" href="hotel.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header site-header">
+        <div class="wrapper site-header__wrapper">
+          <div class="site-header__start">
+            <a href="" class="brand">Hoster!</a>
+          </div>
+          <div>
+            <div class="site-header__end">
+              <ul class="sub-nav">
+                <li class=""><a href="#home">Home</a></li>
+                <li class=""><a href="#pilih-hotel">Pilih Hotel</a></li>
+                <li class=""><a href="#contact-us">Contact Us</a></li>
+              </ul>
+            </div>
+            <nav class="nav">
+              <a class="nav__toggle" aria-expanded="false" type="button">
+                <i class="fa fa-bars"></i>
+              </a>
+              <ul class="nav__wrapper">
+                <a class="nav__toggleexit" aria-expanded="false" type="button" style="margin-top: 100px; margin-left: 25px; font-size: 25px;">
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </a>
+                <li class="nav__item"><a href="#home">Home</a></li>
+                <li class="nav__item"><a href="#pilih-hotel">Pilih Hotel</a></li>
+                <li class="nav__item"><a href="#contact-us">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="nav_sticky">       
+        <a class="scroll" href="#home">Home</a>
+        <a class="scroll" href="#pilih-hotel">Pilih Hotel</a>
+        <a class="scroll" href="#contact-us">Contact Us</a> 
+      </div>
+    </header>
+    <main>
+      <div class="hero-content" style=" --background: url(https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/1a/ea/54/hotel-presidente-4s.jpg?w=1200&h=-1&s=1); --overlay: #000a;" id="home">
+        <h1>Selamat datang di Hoster!</h1>
+        <p>
+          Dapatkan penawaran hotel dengan harga miring!
+          Buruan booking sebelum kehabisan!
+        </p>
+        <div class="arrow bounce">
+          <a class="fa fa-arrow-down fa-2x" href="#pilih-hotel"></a>
+        </div>
+      </div>
+      <div class="flex-container wrapper" id="pilih-hotel">
+        <aside class="sidebar">
+          <h2>Pilih Kota</h2>
+          <p>
+            Hoster mencakup hotel hotel di seluruh Indonesia. Terdapat berbagai pilihan hotel sesuai tempat tujuanmu!
+          </p>
+          <div class="center_location_select">
+            <button class="location_select_button" onclick="selectLocation(event, 'Semarang')">Semarang</button><br>
+            <button class="location_select_button" onclick="selectLocation(event, 'Jakarta')">Jakarta</button><br>
+            <button class="location_select_button" onclick="selectLocation(event, 'Surabaya')">Surabaya</button><br>
+            <button class="location_select_button" onclick="selectLocation(event, 'Bandung')">Bandung</button><br>
+          </div>
+        </aside>
+        <section class="content" style="background: #D1E8E2; color: black;">
+          <h2>List Hotel</h2>
+          <div class="main-container" id="dataList">
+            <div class="cards" id="listItem">
+              <article class="card">
+                <div class="card__icon">
+                  <i class="fa-solid fa-hotel"></i>
+                </div>
+                <h2 class="card__title">Hotel Name</h2>
+                <p class="card__apply">
+                  <a class="card__link" href="#">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                  </a>
+                </p>
+              </article>
+              <div class="break"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="flex-container wrapper" id="contact-us">
+        <section class="content">
+          <h2>Contact Us</h2>
+          <p>
+            feel free to contact us anytime!
+          </p>
+          <h3>
+            <i class="fa-solid fa-phone" style="margin-right: 15px;"></i> +62 (0) 812 3456 7891
+          </h3>
+          <h3>
+            <i class="fa-solid fa-envelope" style="margin-right: 15px;"></i> help@hoster.id
+          </h3>
+          <h3>
+            <i class="fa-solid fa-map-location" style="margin-right: 15px;"></i> Jl. Anggrek Kopi No 18, Jakarta
+          </h3>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe width="100%" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=jakarta&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+              </iframe>
+            </div>
+          </div>
+        </section>
+        <aside class="sidebar">
+          <div class="container">
+            <div class="card">
+              <div class="imgBx">
+                <img src="my_photo.png">
+              </div>
+              <div class="contentBx">
+                <h2>Matthew Brandon Dani</h2>
+                <div class="dicodingid">
+                  <h3>Dicoding Name :</h3>
+                  Matthew Brandon Dani
+                </div>
+                <div class="social-icon">
+                  <a href="https://instagram.com/matthew.brandon.dani" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://matthewbd.my.id" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-briefcase"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Hoster!</h1>
+      <div class="legal">
+        <p>&copy; <span id="year"></span> Hoster!. All rights reserved.</p>
+        <div class="legal__desc">
+          <span>Made with <span class="heart">♥</span> by Matthew Brandon Dani</span>
+        </div>
+      </div>
+    </footer>
+    <script language="JavaScript" type="text/javascript" src="script.js"></script>
+  </body>
+</html>
